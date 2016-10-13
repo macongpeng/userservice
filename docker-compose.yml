@@ -1,0 +1,14 @@
+userservice-db:
+  image: mysql:latest
+  environment:
+    - MYSQL_ROOT_PASSWORD=p4SSW0rd
+    - MYSQL_DATABASE=userservice
+    - MYSQL_USER=dbuser
+    - MYSQL_PASSWORD=dbp4ss
+
+userservice-docker-webapp:
+  image: horncom/userservice
+  links:
+    - userservice-db:mysql
+  ports:
+    - 8080:8080

@@ -13,14 +13,14 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * Created by dennyma on 10/10/2016.
  */
 @SpringBootApplication
-public class Application implements CommandLineRunner {
+public class Application /*implements CommandLineRunner*/ {
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
 
-    @Autowired
+    /*@Autowired
     JdbcTemplate jdbcTemplate;
 
     @Override
@@ -36,5 +36,5 @@ public class Application implements CommandLineRunner {
         {
             log.warn("Could not initialize jdbcTemplate");
         }
-    }
+    }*/
 }
